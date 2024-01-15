@@ -3,7 +3,7 @@
         <tr>
             <th [attr.colspan]='columnas'>
                 Ciclista
-            </th><!--[attr.colspan]='columnas', attr.colspan='{{columnas}}'-->
+            </th><!--[attr.colspan]='columnas' (interpolacion), attr.colspan='{{columnas}}'  (enlace de datos)-->
         </tr>
     </thead>
     <tbody>
@@ -15,13 +15,17 @@
             <td>Apellidos</td>
             <td>{{apellidos}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="visibles">
             <td>Direccion</td>
             <td>{{direccion}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="visibles">
             <td>Edad</td>
             <td>{{edad}}</td>
         </tr>
     </tbody>
 </table>
+<br>
+<button (click)="alternarVisibles()">{{visibles ? "Ocultar" : "Mostrar"}} Detalles</button>
+
+<!--depende del valor de la varible visibles, en el contenido del boton pondra una cosa u otra-->

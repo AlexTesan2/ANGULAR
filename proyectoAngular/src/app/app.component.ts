@@ -13,7 +13,7 @@ import { pruebasComponent } from './ComponenteDepruebas/ComponentePruebas.compon
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
             BotonesComponent, revueltoComponent, pruebasComponent],
   template: `
-            <pruebas></pruebas>
+            <Ima-visible></Ima-visible>
             <!--
               <el-alumno></el-alumno>
               <revuelto></revuelto>

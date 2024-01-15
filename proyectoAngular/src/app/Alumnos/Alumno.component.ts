@@ -1,8 +1,10 @@
 import { Component } from "@angular/core";
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'el-alumno',
     standalone: true,
+    imports: [CommonModule],
     templateUrl: './Alumno.component.html',
     styleUrls: ['./Alumno.component.css']
 })
