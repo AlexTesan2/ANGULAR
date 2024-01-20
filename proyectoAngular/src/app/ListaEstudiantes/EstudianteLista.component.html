@@ -1,0 +1,28 @@
+<contadorHijo [todos]="getNumTodos()" [hombres]="getNumHombres()" [mujeres]="getNumMujeres()"></contadorHijo>
+<!-- las variables del contador, se cargan con las funciones de Estudiante lista grascias al @Input -->
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Fecha de nacimiento</th>
+            <th>sexo</th>
+        </tr>
+    </thead>
+    <tbody><!--queremos crear cuatro filas (tr), los (td) son columnas individuales-->
+        <tr *ngFor="let estudiante of estudiantes">
+            <td>{{estudiante.nombre | uppercase | estudianteTitulo:estudiante.sexo }} {{estudiante.apellidos | lowercase}}</td>
+            <td>{{estudiante.direccion}}</td>
+            <td>{{estudiante.fnac | date: 'dd/MMM/y'}}</td>
+            <td>{{estudiante.sexo}}</td>
+        </tr>
+        <tr *ngIf="!estudiantes || estudiantes.length == 0 "><!--si estudiantes es distinto de null o si esta vacio,  sera visible-->
+            <td colspan="4">No Hay estudiantes</td>
+        </tr>
+        <tr *ngIf="estudiantes.length > 0 ">
+            <td colspan="4">SI Hay estudiantes</td>
+        </tr>
+    </tbody>
+</table>
+<!--ngFor es como el forEach-->
+<!--let acepta cualquier tipo de dato-->

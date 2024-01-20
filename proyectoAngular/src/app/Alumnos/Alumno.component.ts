@@ -27,4 +27,4 @@ export class AlumnoComponent {
     }
 }
 //en la clase hay atributos y metodos con los que trabajaremos en el componenente
-//se crean y asignan la asvaraibles
+//se crean y asignan las varaibles

@@ -2,22 +2,22 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AlumnoComponent } from './Alumnos/Alumno.component';
-import { AlumnoListaComponent } from './Alumnos/AlumnoLista.component';
-import { ImagenVisibleComponent } from './ImagenVisible/ImagenVisible.component';
-import { BotonesComponent } from './BotonesVarios/Botones.component';
-import { revueltoComponent } from './Revuelto/Revuelto.component';
-import { pruebasComponent } from './ComponenteDepruebas/ComponentePruebas.component';
+import { EstudianteListaComponent } from './ListaEstudiantes/EstudianteLista.component';
+import { ImagenVisibleComponent } from './ComponentesSimples/ImagenVisible.component';
+import { BotonesComponent } from './ComponentesSimples/Botones.component';
+import { revueltoComponent } from './ComponentesSimples/Revuelto.component';
+import { pruebasComponent } from './ComponentesSimples/ComponentePruebas.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
-            BotonesComponent, revueltoComponent, pruebasComponent, AlumnoListaComponent],
+            BotonesComponent, revueltoComponent, pruebasComponent, EstudianteListaComponent, ],
   template: `
-            <lista-alumnos></lista-alumnos>
+
+            <lista-estudiantes></lista-estudiantes>
             <!--
               <el-alumno></el-alumno>
-              <lista-alumnos></lista-alumnos>
               <revuelto></revuelto>
               <Ima-visible></Ima-visible>
               <botones></botones>

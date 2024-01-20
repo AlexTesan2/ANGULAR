@@ -9,8 +9,6 @@ import { AlumnoComponent } from '../Alumnos/Alumno.component';
     template: `
             <img src='../../assets/dino.jpeg' width=400 *ngIf='visible'>
             <button (click)="onClick()">BotonFoto</button>
-            <br><br>
-            <el-alumno></el-alumno>
             `,
 })
 //ngIf directiva que trata sobre la visibilidad de un objeto
