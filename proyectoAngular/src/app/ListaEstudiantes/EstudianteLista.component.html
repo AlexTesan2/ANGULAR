@@ -11,6 +11,7 @@
             <th>Dirección</th>
             <th>Fecha de nacimiento</th>
             <th>sexo</th>
+            <th>padre</th>
         </tr>
     </thead>
     <tbody><!--queremos crear cuatro filas (tr), los (td) son columnas individuales-->
@@ -20,6 +21,7 @@
                 <td>{{estudiante.direccion}}</td>
                 <td>{{estudiante.fnac | date: 'dd/MMM/y'}}</td>
                 <td>{{estudiante.sexo}}</td>
+                <td>{{estudiante.nom_padre}}</td>
             </tr>
         </ng-container>
         <tr *ngIf="!estudiantes || estudiantes.length == 0 "><!--si estudiantes es distinto de null o si esta vacio,  sera visible-->

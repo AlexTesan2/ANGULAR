@@ -2,6 +2,8 @@ import { Component } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { EstudianteTituloPipe } from "./EstudianteTitulo.pipe";
 import { contadorHijo } from "./Contador.component";
+import { IEstudiante, Alumno } from "./IEstudiante";
+
 
 //esta es la VISTA
 @Component({
@@ -16,13 +18,20 @@ import { contadorHijo } from "./Contador.component";
 export class EstudianteListaComponent {
 
     seleccion: string = 'Todos'
+    //estudiantes : IEstudiante[];
+    estudiantes : Alumno[];
 
-    estudiantes: any [] = [
-        {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Segovia', fnac: '2/28/1958', sexo: 'Hombre' },
-        {nombre: 'Juana', apellidos: 'Garcia', direccion: 'Madrid', fnac: '10/22/1988', sexo: 'Mujer' },
-        {nombre: 'Yo', apellidos: 'Mi apellido', direccion: 'mi casa', fnac: '4/30/1947' ,sexo: 'Hombre'},
-        {nombre: 'Laura', apellidos: 'Gomez', direccion: 'Barcelona', fnac: '12/1/1945' , sexo: 'Mujer'}
-    ];
+    constructor(){
+        //estudiantes: any [] = [
+        //estudiantes: IEstudiante [] = [
+        this.estudiantes = [
+            {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Segovia', fnac: '2/28/1958', sexo: 'Hombre', nom_padre: 'Pepe' },
+            {nombre: 'Juana', apellidos: 'Garcia', direccion: 'Madrid', fnac: '10/22/1988', sexo: 'Mujer' },
+            {nombre: 'Yo', apellidos: 'Mi apellido', direccion: 'mi casa', fnac: '4/30/1947' ,sexo: 'Hombre'},
+            {nombre: 'Laura', apellidos: 'Gomez', direccion: 'Barcelona', fnac: '12/1/1945' , sexo: 'Mujer'}
+        ];
+    }
+
 
     alCambiar(opcionSeleccionada: string): void{
         this.seleccion = opcionSeleccionada;
