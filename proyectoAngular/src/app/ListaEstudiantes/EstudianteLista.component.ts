@@ -14,12 +14,19 @@ import { contadorHijo } from "./Contador.component";
 
 //este es el CONTROLADOR
 export class EstudianteListaComponent {
+
+    seleccion: string = 'Todos'
+
     estudiantes: any [] = [
         {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Segovia', fnac: '2/28/1958', sexo: 'Hombre' },
         {nombre: 'Juana', apellidos: 'Garcia', direccion: 'Madrid', fnac: '10/22/1988', sexo: 'Mujer' },
         {nombre: 'Yo', apellidos: 'Mi apellido', direccion: 'mi casa', fnac: '4/30/1947' ,sexo: 'Hombre'},
         {nombre: 'Laura', apellidos: 'Gomez', direccion: 'Barcelona', fnac: '12/1/1945' , sexo: 'Mujer'}
     ];
+
+    alCambiar(opcionSeleccionada: string): void{
+        this.seleccion = opcionSeleccionada;
+    }
 
     getNumTodos(): number{
         return this.estudiantes.length;
