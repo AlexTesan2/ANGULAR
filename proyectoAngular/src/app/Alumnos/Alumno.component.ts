@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
     templateUrl: './Alumno.component.html',
     styleUrls: ['./Alumno.component.css']
 })
-//en el @Component se crea el componente
+//en el @Component se crea la vista del componente
 //el selector es el nombre del componente
 //template es el contenido del componente
 //puede ser template:`<div>codigo</div>`  o templateUrl: './direccion'
@@ -27,4 +27,3 @@ export class AlumnoComponent {
     }
 }
 //en la clase hay atributos y metodos con los que trabajaremos en el componenente
-//se crean y asignan las varaibles

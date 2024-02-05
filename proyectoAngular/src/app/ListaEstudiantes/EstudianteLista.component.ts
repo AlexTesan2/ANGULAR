@@ -1,35 +1,46 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { EstudianteTituloPipe } from "./EstudianteTitulo.pipe";
 import { contadorHijo } from "./Contador.component";
 import { IEstudiante, Alumno } from "./IEstudiante";
+import { EstudiantesService } from "./EstudiantesService";
 
-
+//OnInit se ejecuta al iniciar
 //esta es la VISTA
 @Component({
     selector: 'lista-estudiantes',
     standalone: true,
-    imports: [CommonModule, EstudianteTituloPipe,contadorHijo],
+    imports: [CommonModule, EstudianteTituloPipe,contadorHijo,],
     templateUrl: 'EstudianteLista.component.html',
     styleUrls: ['./../Alumnos/Alumno.component.css'],
+    providers: [EstudiantesService]
 })
 
 //este es el CONTROLADOR
-export class EstudianteListaComponent {
+export class EstudianteListaComponent implements OnInit {
 
     seleccion: string = 'Todos'
     //estudiantes : IEstudiante[];
-    estudiantes : Alumno[];
+    estudiantes : Alumno[] = [];
 
-    constructor(){
+    //constructor(){
         //estudiantes: any [] = [
         //estudiantes: IEstudiante [] = [
-        this.estudiantes = [
+        //ya no sacaremos los datos de aqui, los sacaremos del service
+        /*this.estudiantes = [
             {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Segovia', fnac: '2/28/1958', sexo: 'Hombre', nom_padre: 'Pepe' },
             {nombre: 'Juana', apellidos: 'Garcia', direccion: 'Madrid', fnac: '10/22/1988', sexo: 'Mujer' },
             {nombre: 'Yo', apellidos: 'Mi apellido', direccion: 'mi casa', fnac: '4/30/1947' ,sexo: 'Hombre'},
             {nombre: 'Laura', apellidos: 'Gomez', direccion: 'Barcelona', fnac: '12/1/1945' , sexo: 'Mujer'}
-        ];
+        ];*/
+    //}
+
+    constructor(public losAlumnos : EstudiantesService){   //inyectamos el servicio por inyeccion de dependencias
+        //this.estudiantes = losAlumnos.getAlumnos(); //lo podemos dejar en blanco y hacerlo en el onInit
+    }
+
+    ngOnInit(): void {          //dar valores iniciales a los alumnos, lo mismo q el contructor
+        this.estudiantes = this.losAlumnos.getAlumnos();
     }
 
 

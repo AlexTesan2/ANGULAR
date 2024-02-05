@@ -29,8 +29,8 @@ export class BotonesComponent {
 
     addClases(){
         let clases={
-        negrita: this.aplicar_negrita,
-        color: this.aplicar_color,
+            negrita: this.aplicar_negrita,
+            color: this.aplicar_color,
         }
         return clases;
     }
