@@ -35,15 +35,26 @@ export class EstudianteListaComponent implements OnInit {
         ];*/
     //}
 
-    constructor(public losAlumnos : EstudiantesService){   //inyectamos el servicio por inyeccion de dependencias
+    //version 2
+    constructor(public losAlumnos : EstudiantesService){   
+
+    }
+
+    ngOnInit(): void {
+        this.losAlumnos.getAlumnos().subscribe((datosAlumnos) => this.estudiantes = datosAlumnos);
+    }
+    //solo hay q hacwer 2 cosas: leer desde el service, y leer esa funcion a traces de un objeto, el suscribe extrae la info
+
+    //version local
+    /*constructor(public losAlumnos : EstudiantesService){   //inyectamos el servicio por inyeccion de dependencias
         //this.estudiantes = losAlumnos.getAlumnos(); //lo podemos dejar en blanco y hacerlo en el onInit
     }
 
     ngOnInit(): void {          //dar valores iniciales a los alumnos, lo mismo q el contructor
         this.estudiantes = this.losAlumnos.getAlumnos();
-    }
+    }*/
 
-
+    //en la api me tienen q dar permisos, el service por a funcion get lee la api , te mete lo leido en un objeto observable, y se lee el observable con la funcion subscribe 
     alCambiar(opcionSeleccionada: string): void{
         this.seleccion = opcionSeleccionada;
     }

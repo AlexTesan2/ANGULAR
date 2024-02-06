@@ -1,0 +1,14 @@
+<span class="radioclass">Muestra : </span>
+
+<input name="opciones" type="radio" value="Todos" [(ngModel)]= "opcionElegida" (change)="cuandoCambiemos()"/>
+<span class="radioclass">{{'Todos('+ todos +')'}}</span>
+
+<input name="opciones" type="radio" value="Hombre" [(ngModel)]= "opcionElegida" (change)="cuandoCambiemos()"/>
+<span class="radioclass">{{'Hombres('+ hombres +')'}}</span>
+
+<input name="opciones" type="radio" value="Mujer" [(ngModel)]= "opcionElegida" (change)="cuandoCambiemos()"/>
+<span class="radioclass">{{'Mujeres('+ mujeres +')'}}</span>
+
+<br><br>
+<!--si se marca uno, el otro se desmarca, pq tienen el mismo name-->
+<!--el [(ngModel)], si se cambia el valor del radio button, cambia el valor de la variable, y viceversa-->

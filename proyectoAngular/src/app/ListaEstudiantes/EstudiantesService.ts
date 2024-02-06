@@ -1,10 +1,41 @@
 //El service es el repositorio donde se guardaran los datos
 // (no es un component, no tiene html )
-import { Injectable } from "@angular/core";
+import { Injectable, NgModule } from "@angular/core";
 import { Alumno } from "./IEstudiante";
+//import { HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+//ahora sacaremos los datos de la api
 
+//este se conectara con el vs
 @Injectable()
 export class EstudiantesService{
+    constructor(private _http: HttpClient){
+
+    }
+    getAlumnos(): Observable<Alumno[]>{
+        return this._http.get<Alumno[]>("https://localhost:44302/api/alumno/");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//para sacar los datos del propio angular
+/*export class EstudiantesService{
     getAlumnos(): Alumno[]{
         return [
             {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Segovia', fnac: '2/28/1958', sexo: 'Hombre', nom_padre: 'Pepe' },
@@ -13,7 +44,7 @@ export class EstudiantesService{
             {nombre: 'Laura', apellidos: 'Gomez', direccion: 'Barcelona', fnac: '12/1/1945' , sexo: 'Mujer'}
         ];
     }
-}
+}*/
 
 
 

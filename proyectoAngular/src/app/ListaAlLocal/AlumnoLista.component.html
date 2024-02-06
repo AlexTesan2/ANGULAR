@@ -1,0 +1,36 @@
+<contadorHijo   [todos]="getNumTodos()" 
+                [hombres]="getNumHombres()" 
+                [mujeres]="getNumMujeres()"
+                (globalElegido)="alCambiar($event)"
+></contadorHijo>    <!--sintaxis complicada ! -->
+<!-- las variables del contador, se cargan con las funciones de Estudiante lista gracias al @Input -->
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Fecha de nacimiento</th>
+            <th>sexo</th>
+            <th>padre</th>
+        </tr>
+    </thead>
+    <tbody><!--queremos crear cuatro filas (tr), los (td) son columnas individuales-->
+        <ng-container *ngFor="let alumno of alumnos">
+            <tr *ngIf="seleccion == 'Todos' || seleccion == alumno.sexo"><!--no se pueden poner dos directivas el mismo elemento-->
+                <td>{{alumno.nombre | uppercase | alumnoTitulo:alumno.sexo }} {{alumno.apellidos | lowercase}}</td>
+                <td>{{alumno.direccion}}</td>
+                <td>{{alumno.fnac | date: 'dd/MMM/y'}}</td>
+                <td>{{alumno.sexo}}</td>
+                <td>{{alumno.nom_padre}}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!alumnos || alumnos.length == 0 "><!--si alumnos es distinto de null o si esta vacio,  sera visible-->
+            <td colspan="4">No Hay estudiantes</td>
+        </tr>
+        <tr *ngIf="alumnos.length > 0 ">
+            <td colspan="4">SI Hay estudiantes</td>
+        </tr>
+    </tbody>
+</table>
+<!--ngFor es como el forEach-->
+<!--let acepta cualquier tipo de dato-->
