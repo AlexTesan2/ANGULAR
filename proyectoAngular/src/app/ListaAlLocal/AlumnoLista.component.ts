@@ -5,7 +5,6 @@ import { contadorHijo } from "./Contador.component";
 import { IAlumno, Alumno } from "./IAlumno";
 
 
-//OnInit se ejecuta al iniciar
 //esta es la VISTA
 @Component({
     selector: 'lista-alumnos-local',

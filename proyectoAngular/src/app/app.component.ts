@@ -9,17 +9,20 @@ import { revueltoComponent } from './ComponentesSimples/Revuelto.component';
 import { pruebasComponent } from './ComponentesSimples/ComponentePruebas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlumnoListaComponent } from './ListaAlLocal/AlumnoLista.component';
+import { AlumnoListaComponent2 } from './ListaAlLocal/AlumnoLista.component2';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
             BotonesComponent, revueltoComponent, pruebasComponent, EstudianteListaComponent,
-            HttpClientModule, AlumnoListaComponent],
+            HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2],
   template: `
-
-            <lista-alumnos-local></lista-alumnos-local>
+            
             <!--
+              <lista-alumnos-local></lista-alumnos-local>
+              <lista-alumnos-local-2></lista-alumnos-local-2>
               <el-alumno></el-alumno>
               <revuelto></revuelto>
               <Ima-visible></Ima-visible>
