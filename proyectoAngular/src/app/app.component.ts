@@ -10,6 +10,7 @@ import { pruebasComponent } from './ComponentesSimples/ComponentePruebas.compone
 import { HttpClientModule } from '@angular/common/http';
 import { AlumnoListaComponent } from './ListaAlLocal/AlumnoLista.component';
 import { AlumnoListaComponent2 } from './ListaAlLocal/AlumnoLista.component2';
+import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
 
 
 @Component({
@@ -17,9 +18,10 @@ import { AlumnoListaComponent2 } from './ListaAlLocal/AlumnoLista.component2';
   standalone: true,
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
             BotonesComponent, revueltoComponent, pruebasComponent, EstudianteListaComponent,
-            HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2],
+            HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2, LitaAlumnosServer],
   template: `
             
+            <lista-alumnos-server></lista-alumnos-server>
             <!--
               <lista-alumnos-local></lista-alumnos-local>
               <lista-alumnos-local-2></lista-alumnos-local-2>
