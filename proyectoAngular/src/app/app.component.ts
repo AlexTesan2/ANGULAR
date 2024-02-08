@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AlumnoComponent } from './Alumnos/Alumno.component';
-import { EstudianteListaComponent } from './ListaEstudiantes/EstudianteLista.component';
 import { ImagenVisibleComponent } from './ComponentesSimples/ImagenVisible.component';
 import { BotonesComponent } from './ComponentesSimples/Botones.component';
 import { revueltoComponent } from './ComponentesSimples/Revuelto.component';
@@ -17,12 +16,24 @@ import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
-            BotonesComponent, revueltoComponent, pruebasComponent, EstudianteListaComponent,
+            BotonesComponent, revueltoComponent, pruebasComponent,
             HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2, LitaAlumnosServer],
   template: `
+            <div style="padding: 10px;">
+              <ul class="nav nav-tabs justify-content-left">
+                <li class="nav-item">
+                  <a class="nav-link" href="Alumnos" aria-current="page">Alumnos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Profesores" aria-current="page">Profesores</a>
+                </li>
+              </ul>
+              <router-outlet></router-outlet>
+            </div>
             
-            <lista-alumnos-server></lista-alumnos-server>
+            
             <!--
+              <lista-alumnos-server></lista-alumnos-server>
               <lista-alumnos-local></lista-alumnos-local>
               <lista-alumnos-local-2></lista-alumnos-local-2>
               <el-alumno></el-alumno>
