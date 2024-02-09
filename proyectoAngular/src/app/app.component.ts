@@ -25,6 +25,9 @@ import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
                   <a class="nav-link" href="Alumnos" aria-current="page">Alumnos</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="Alumnos2" aria-current="page">AlumServer</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="Profesores" aria-current="page">Profesores</a>
                 </li>
               </ul>

@@ -6,6 +6,7 @@ import { profesorComponent } from './Profesores/Profesor.component';
 
 export const routes: Routes = [
     {path: 'Alumnos', component: AlumnoListaComponent},
+    {path: 'Alumnos2', component: LitaAlumnosServer},
     {path: 'Profesores', component: profesorComponent},
     {path: '', redirectTo: '/Profesores', pathMatch: 'full'},
     {path: '**', component: PagianNoencontradaComponent }
