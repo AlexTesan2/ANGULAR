@@ -1,5 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from "@angular/router";
+import { Alumno } from "../ListaAlLocal/IAlumno";
+import { AlumService } from "../ListaAlServer/AlumService";
 
 @Component({
     selector: 'el-alumno',
@@ -8,13 +11,21 @@ import { CommonModule } from '@angular/common';
     templateUrl: './Alumno.component.html',
     styleUrls: ['./Alumno.component.css']
 })
-//en el @Component se crea la vista del componente
-//el selector es el nombre del componente
-//template es el contenido del componente
-//puede ser template:`<div>codigo</div>`  o templateUrl: './direccion'
+export class AlumnoComponent implements OnInit{
+    alumno!: Alumno;
+
+    constructor(private alumnoService: AlumService, private activatedRoute: ActivatedRoute){}
+    
+    ngOnInit(): void {
+        let idAlumno: number= this.activatedRoute.snapshot.params['id'];
+        //this.alumnoService.getAlumnosPorId(idAlumno.subscribe((datosAlumno) => this.alumno = datosAlumno);
+    }
+}
 
 
-export class AlumnoComponent {
+
+
+/*export class AlumnoComponent {
     columnas: number = 2;
     nombre: string="Perico";
     apellidos: string="Delgado";
@@ -25,5 +36,5 @@ export class AlumnoComponent {
     alternarVisibles(): void {
         this.visibles = !this.visibles;
     }
-}
+}*/
 //en la clase hay atributos y metodos con los que trabajaremos en el componenente

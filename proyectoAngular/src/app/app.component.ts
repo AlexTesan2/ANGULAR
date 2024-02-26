@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlumnoListaComponent } from './ListaAlLocal/AlumnoLista.component';
 import { AlumnoListaComponent2 } from './ListaAlLocal/AlumnoLista.component2';
 import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
+import { AlumnosCursoLista } from './AlumnosCurso/AlumnosCursoLista.Component';
+import { CursoLista } from './AlumnosCurso/CursoLista.Component';
 
 
 @Component({
@@ -17,8 +19,14 @@ import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
             BotonesComponent, revueltoComponent, pruebasComponent,
-            HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2, LitaAlumnosServer],
+            HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2, LitaAlumnosServer,
+            AlumnosCursoLista, CursoLista],
   template: `
+
+            <AlumnosCursoLista></AlumnosCursoLista>
+            <CursoLista></CursoLista>
+            <br><br>
+            <h1>Componentes</h1>    
             <div style="padding: 10px;">
               <ul class="nav nav-tabs justify-content-left">
                 <li class="nav-item">

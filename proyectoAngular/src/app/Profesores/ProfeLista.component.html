@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let pr of prfesores">
+            <tr><!--no se pueden poner dos directivas el mismo elemento-->
+                <td>{{pr.Nombre}}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!prfesores || prfesores.length == 0 ">
+            <td colspan="4">No</td>
+        </tr>
+        <tr *ngIf="prfesores.length > 0 ">
+            <td colspan="4">SI</td>
+        </tr>
+    </tbody>
+</table>

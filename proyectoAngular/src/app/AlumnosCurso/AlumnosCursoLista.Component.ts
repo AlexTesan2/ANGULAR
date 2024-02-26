@@ -1,24 +1,23 @@
 import { Component, OnInit } from "@angular/core";
 import { CommonModule } from '@angular/common';
-import { contadorHijo } from "./Contador.component";
-import { IAlum, Alumno } from "./IAlum";
-import { AlumService } from "./AlumService";
+import { IAlumCuso, AlumnoC } from "./IAlumCuso";
+import { AlumCursoService } from "./AlumCursoService";
 import { RouterModule } from "@angular/router";
 
 @Component({
-    selector: 'lista-alumnos-server',
+    selector: 'AlumnosCursoLista',
     standalone: true,
-    imports: [CommonModule,contadorHijo, RouterModule],
-    templateUrl: 'AlumLista.component.html',
+    imports: [CommonModule, RouterModule],
+    templateUrl: 'AlumnosCursoLista.Component.html',
     styleUrls: ['./../Alumnos/Alumno.component.css'],
-    providers: [AlumService]
+    providers: [AlumCursoService]
 })
 
-export class LitaAlumnosServer implements OnInit {
+export class AlumnosCursoLista implements OnInit {
 
     seleccion: string = 'Todos'
-    alumnos : Alumno[] = [];
-    constructor(public losAlumnos : AlumService){   
+    alumnos : AlumnoC[] = [];
+    constructor(public losAlumnos : AlumCursoService){   
 
     }
 
@@ -38,11 +37,11 @@ export class LitaAlumnosServer implements OnInit {
     }
 
     getNumHombres(): number {
-        return this.alumnos.filter(a => a.sexo.trim() === "Hombre").length;
+        return this.alumnos.filter(a => a.sexo === "Hombre").length;
     }
     
     getNumMujeres(): number{
-        return this.alumnos.filter(a => a.sexo.trim() == "Mujer" ).length;
+        return this.alumnos.filter(a => a.sexo == "Mujer" ).length;
     }
 
     //.trim pq me equivoque el el server y el campo sexo es nchar en lugar de nvarchar
