@@ -16,7 +16,7 @@ export class contadorHijo  {
     opcionElegida: string = "Todos"  //el valor es igual q el value de contador html/ sera la opcion por defecto
 
     @Output()
-    globalElegido: EventEmitter<string> = new EventEmitter<string>()  //sirve para pasar los datos
+    globalElegido: EventEmitter<string> = new EventEmitter<string>()  //sirve para pasar los datos al otro componente
 
     @Input()
     todos:  number =0;

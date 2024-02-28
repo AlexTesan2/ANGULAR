@@ -12,7 +12,7 @@ import { AlumnoListaComponent2 } from './ListaAlLocal/AlumnoLista.component2';
 import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
 import { AlumnosCursoLista } from './AlumnosCurso/AlumnosCursoLista.Component';
 import { CursoLista } from './AlumnosCurso/CursoLista.Component';
-
+import { padre } from './Padre-Hijo/Padre';
 
 @Component({
   selector: 'app-root',
@@ -20,11 +20,13 @@ import { CursoLista } from './AlumnosCurso/CursoLista.Component';
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
             BotonesComponent, revueltoComponent, pruebasComponent,
             HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2, LitaAlumnosServer,
-            AlumnosCursoLista, CursoLista],
+            AlumnosCursoLista, CursoLista, padre],
   template: `
-
             <AlumnosCursoLista></AlumnosCursoLista>
-            <CursoLista></CursoLista>
+
+
+            <!--  
+
             <br><br>
             <h1>Componentes</h1>    
             <div style="padding: 10px;">
@@ -41,8 +43,8 @@ import { CursoLista } from './AlumnosCurso/CursoLista.Component';
               </ul>
               <router-outlet></router-outlet>
             </div>
-            
-            
+            <br>
+            -->
             <!--
               <lista-alumnos-server></lista-alumnos-server>
               <lista-alumnos-local></lista-alumnos-local>

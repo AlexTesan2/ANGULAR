@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
                 <button [ngClass]='addClases()'>boton7</button>
             `,
 })
-//los botones cojen los estilos de styles.css
+//los botones, si no se especifica la ruta cojen por defecto los estilos de styles.css
 // el 2 y 3 son formas sintacticamente diferentes de hacer lo mismo
 //en el 4, 5 y 6 aplicamos booleanos sobre los estilos
 // el 7 llama a un metodo q aplica booleanos sobre los estilos

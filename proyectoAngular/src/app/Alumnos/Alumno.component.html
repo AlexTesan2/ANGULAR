@@ -1,30 +1,32 @@
-<table>
+<table>         <!--Esto seria un componente; una porcion de codigo HTML que implementaremos en otros codigos mas grandes-->
     <thead>
         <tr>
-            <th [attr.colspan]=2>
+            <th [attr.colspan]='columnas'>
                 Ciclista
-            </th>
+            </th><!--[attr.colspan]='columnas' (interpolacion), attr.colspan='{{columnas}}'  (enlace de datos)-->
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Nombre</td>
-            <td>{{alumno.nombre}}</td>
+            <td>{{nombre}}</td>  <!--Para utilizar el valor de una variable se utiliza doble llave {{var}}-->
         </tr>
         <tr>
             <td>Apellidos</td>
-            <td>{{alumno.apellidos}}</td>
+            <td>{{apellidos}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="visibles">
             <td>Direccion</td>
-            <td>{{alumno.direccion}}</td>
+            <td>{{direccion}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="visibles">
             <td>Edad</td>
-            <td>alumno.edad</td>
+            <td>{{edad}}</td>
         </tr>
     </tbody>
 </table>
+<br>
+<button (click)="alternarVisibles()">{{visibles ? "Ocultar" : "Mostrar"}} Detalles</button>-->
 
 
 

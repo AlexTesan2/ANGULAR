@@ -2,8 +2,11 @@
                 [hombres]="getNumHombres()" 
                 [mujeres]="getNumMujeres()"
                 (globalElegido)="alCambiar($event)"
-></contadorHijo>    <!--sintaxis complicada ! -->
-<!-- las variables del contador, se cargan con las funciones de Estudiante lista gracias al @Input -->
+></contadorHijo>
+<!--contadorHijo es el hijo, porque esta dentro de otro componente, AlumnoLista es el padre-->
+<!--las 3 primeras varables (son del contador) se cargan con las funciones de AlumnoLista gracias al @Input
+la ultima variable (globalElegido) sera un dato que se pasasara a una funcion de AlumnoLista gracias al @Output
+se llama a la funcion al cambiar, solo cuando se produce un evento-->
 <table>
     <thead>
         <tr>

@@ -1,7 +1,38 @@
-<section>
-    
-</section>
-<table>
+<select style="margin-left: 20px; margin-top: 20px; width: 90px;"
+        [(ngModel)]="seleccion" (change)="alSeleccionar($event)">
+
+    <option *ngFor="let curso of cursos" [ngValue]="curso"> 
+        {{curso.ano}} {{curso.letra}} 
+    </option>
+</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<table>
     <thead>
         <tr>
             <th>ID</th>
@@ -14,7 +45,7 @@
         <ng-container *ngFor="let curso of cursos">
             <tr>
                 <td>{{curso.id}}</td>
-                <td>{{curso.ano | date: 'yyyy'}}</td>
+                <td>{{curso.ano}}</td>
                 <td>{{curso.letra}}</td>
                 <td>{{curso.cicloID}}</td>
             </tr>
@@ -26,4 +57,21 @@
             <td colspan="4">SI Hay cursos</td>
         </tr>
     </tbody>
-</table>
+</table>-->
+<!--<select [(ngModel)]="selectedCurso">
+    <option *ngFor="let curso of cursos" [ngValue]="curso">
+        {{curso.ano | date: 'yyyy'}} - {{curso.letra}}
+    </option>
+</select>
+
+<div *ngIf="selectedCurso">
+    <p>ID: {{selectedCurso.id}}</p>
+    <p>Año: {{selectedCurso.ano | date: 'yyyy'}}</p>
+    <p>Letra: {{selectedCurso.letra}}</p>
+    <p>CicloID: {{selectedCurso.cicloID}}</p>
+</div>
+
+<div *ngIf="!selectedCurso">
+    <p>No hay curso seleccionado.</p>
+</div>
+-->

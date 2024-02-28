@@ -14,7 +14,6 @@ import { ProfeService } from "./ProfeService";
 
 export class listaProfes implements OnInit {
 
-    seleccion: string = 'Todos'
     prfesores : Profe[] = [];
     constructor(public losPr : ProfeService){   
 
@@ -26,13 +25,4 @@ export class listaProfes implements OnInit {
     //datosProfes lo estoy creando y cargando ahora
     //solo hay q hacer 2 cosas: leer desde el service, y leer esa funcion a traves de un objeto, el suscribe extrae la info ?
     //en la api me tienen q dar permisos, el service por a funcion get lee la api , te mete lo leido en un objeto observable, y se lee el observable con la funcion subscribe 
-    
-    
-    alCambiar(opcionSeleccionada: string): void{
-        this.seleccion = opcionSeleccionada;
-    }
-
-    getNumTodos(): number{
-        return this.prfesores.length;
-    }
 }

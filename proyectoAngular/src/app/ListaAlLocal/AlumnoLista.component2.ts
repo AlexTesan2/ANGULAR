@@ -22,7 +22,7 @@ export class AlumnoListaComponent2 implements OnInit  {
     alumnos : Alumno[] = [];
 
     constructor(public losAlumnos : AlumnosService){   //inyectamos el servicio por inyeccion de dependencias
-        //this.estudiantes = losAlumnos.getAlumnos();       //lo podemos dejar en blanco y hacerlo en el onInit
+        //this.alumnos = losAlumnos.getAlumnos();       //lo podemos dejar en blanco y hacerlo en el onInit
     }
 
     ngOnInit(): void {                                   //OnInit se ejecuta al iniciar

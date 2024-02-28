@@ -1,26 +1,27 @@
-<table>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Dirección</th>
-            <th>Fecha de nacimiento</th>
-            <th>sexo</th>
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngFor="let alumn of alumnos">
-            <tr *ngIf="seleccion == 'Todos' || seleccion == alumn.sexo.trim()"><!--no se pueden poner dos directivas el mismo elemento-->
-                <td><a [routerLink]="['/Alumnos', alumnos]" >{{alumn.nombre | uppercase }} {{alumn.apellidos | lowercase}}</a></td>
-                <td>{{alumn.direccion}}</td>
-                <td>{{alumn.fnac | date: 'dd/MMM/y'}}</td>
-                <td>{{alumn.sexo}}</td>
+<div>
+    <CursoLista 
+    (CursoSeleccionado)="cargarCurso($event)">
+    </CursoLista>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Fecha de nacimiento</th>
+                <th>sexo</th>
+                <th>CursoID</th>
             </tr>
-        </ng-container>
-        <tr *ngIf="!alumnos || alumnos.length == 0 ">
-            <td colspan="4">No Hay alumnos</td>
-        </tr>
-        <tr *ngIf="alumnos.length > 0 ">
-            <td colspan="4">SI Hay alumnos</td>
-        </tr>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let alumn of alumnos">
+                <tr *ngIf="seleccion == 800 || seleccion == alumn.cursoID">
+                    <td><a [routerLink]="['/Alumnos', alumnos]" >{{alumn.nombre | uppercase }} {{alumn.apellidos | lowercase}}</a></td>
+                    <td>{{alumn.direccion}}</td>
+                    <td>{{alumn.fnac | date: 'dd/MMM/y'}}</td>
+                    <td>{{alumn.sexo}}</td>
+                    <td>{{alumn.cursoID}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
