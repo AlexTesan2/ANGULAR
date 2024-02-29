@@ -12,11 +12,11 @@ export class CursoService{
 
     }
     getCursos(): Observable<Cusrsi[]>{
-        return this._http.get<Cusrsi[]>("https://localhost:44302/api/curso");
+        return this._http.get<Cusrsi[]>("https://localhost:44302/api/curso/Get");
     }
 
     getCursosPorId(id: number): Observable<Cusrsi>{
-        return this._http.get<Cusrsi>("https://localhost:44302/api/curso/"+id);
+        return this._http.get<Cusrsi>("https://localhost:44302/api/curso/Get2/"+id);
     }
 }
 //se conecta al servidor (MySqlServer), y le pide los datos (a traves del localhost), y los devuelve como observable

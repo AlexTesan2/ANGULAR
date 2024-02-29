@@ -1,16 +1,53 @@
-<table>         <!--Esto seria un componente; una porcion de codigo HTML que implementaremos en otros codigos mas grandes-->
-    <thead>
+<table >         <!--Esto seria un componente; una porcion de codigo HTML que implementaremos en otros codigos mas grandes-->
+    <tbody>
+        <tr>
+            <td>Nombre</td>
+            <td>{{alumno.nombre}}</td>  <!--Para utilizar el valor de una variable se utiliza doble llave {{var}}-->
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td>{{alumno.apellidos}}</td>
+        </tr>
+        <tr>
+            <td>Direccion</td>
+            <td>{{alumno.direccion}}</td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td>{{alumno.sexo}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<table>         <!--Esto seria un componente; una porcion de codigo HTML que implementaremos en otros codigos mas grandes-->
+    <!--<thead>
         <tr>
             <th [attr.colspan]='columnas'>
                 Ciclista
             </th><!--[attr.colspan]='columnas' (interpolacion), attr.colspan='{{columnas}}'  (enlace de datos)-->
-        </tr>
+        <!--</tr>
     </thead>
     <tbody>
         <tr>
             <td>Nombre</td>
             <td>{{nombre}}</td>  <!--Para utilizar el valor de una variable se utiliza doble llave {{var}}-->
-        </tr>
+        <!--</tr>
         <tr>
             <td>Apellidos</td>
             <td>{{apellidos}}</td>

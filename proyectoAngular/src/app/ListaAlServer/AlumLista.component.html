@@ -15,7 +15,7 @@
     <tbody>
         <ng-container *ngFor="let alumn of alumnos">
             <tr *ngIf="seleccion == 'Todos' || seleccion == alumn.sexo.trim()"><!--no se pueden poner dos directivas el mismo elemento-->
-                <td><a [routerLink]="['/Alumnos', alumnos]" >{{alumn.nombre | uppercase }} {{alumn.apellidos | lowercase}}</a></td>
+                <td><a [routerLink]="['/Alumnos3/', alumn.id]" >{{alumn.nombre | uppercase }} {{alumn.apellidos | lowercase}}</a></td>
                 <td>{{alumn.direccion}}</td>
                 <td>{{alumn.fnac | date: 'dd/MMM/y'}}</td>
                 <td>{{alumn.sexo}}</td>

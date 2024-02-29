@@ -11,7 +11,7 @@ export class ProfeService{
 
     }
     getProfes(): Observable<Profe[]>{
-        return this._http.get<Profe[]>("https://localhost:44302/api/profesor");
+        return this._http.get<Profe[]>("https://localhost:44302/api/profesor/Get");
     }
 }
 //se conecta al servidor (MySqlServer), y le pide los datos (a traves del localhost), y los devuelve como observable

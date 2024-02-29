@@ -13,6 +13,8 @@ import { LitaAlumnosServer } from './ListaAlServer/AlumLista.component';
 import { AlumnosCursoLista } from './AlumnosCurso/AlumnosCursoLista.Component';
 import { CursoLista } from './AlumnosCurso/CursoLista.Component';
 import { padre } from './Padre-Hijo/Padre';
+import { mascotas } from './Mascotas/Mascota.component';
+import { CursoEnlace } from './AlumnosCurso/CusrsosL';
 
 @Component({
   selector: 'app-root',
@@ -20,12 +22,14 @@ import { padre } from './Padre-Hijo/Padre';
   imports: [CommonModule, RouterOutlet, AlumnoComponent, ImagenVisibleComponent, 
             BotonesComponent, revueltoComponent, pruebasComponent,
             HttpClientModule, AlumnoListaComponent, AlumnoListaComponent2, LitaAlumnosServer,
-            AlumnosCursoLista, CursoLista, padre],
+            AlumnosCursoLista, CursoLista, padre, mascotas, CursoEnlace],
   template: `
+            <CursoEnlace></CursoEnlace>
+            
+            <br><br>
             <AlumnosCursoLista></AlumnosCursoLista>
 
-
-            <!--  
+              
 
             <br><br>
             <h1>Componentes</h1>    
@@ -40,11 +44,17 @@ import { padre } from './Padre-Hijo/Padre';
                 <li class="nav-item">
                   <a class="nav-link" href="Profesores" aria-current="page">Profesores</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Mascotas" aria-current="page">Mascotas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="AlumnoDeCurso/:id" aria-current="page">AlumnoDeCurso</a>
+                </li>
               </ul>
               <router-outlet></router-outlet>
             </div>
             <br>
-            -->
+
             <!--
               <lista-alumnos-server></lista-alumnos-server>
               <lista-alumnos-local></lista-alumnos-local>
