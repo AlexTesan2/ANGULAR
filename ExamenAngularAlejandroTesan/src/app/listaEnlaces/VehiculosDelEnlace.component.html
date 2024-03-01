@@ -1,0 +1,20 @@
+<div style="margin-left: 40px;">
+    <table>
+        <thead>
+            <tr>
+                <th>matricula</th>
+                <th>color</th>
+                <th>serieId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let ve of vehiculos">
+                <tr>
+                    <td>{{ve.matricula}}</td>
+                    <td>{{ve.color}}</td>
+                    <td>{{ve.serieId}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

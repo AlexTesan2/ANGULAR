@@ -1,0 +1,22 @@
+<div style="margin-left: 40px;">
+    <SeriesDesplegable (SerieSeleccionada)="cargarSerie($event)">
+    </SeriesDesplegable>
+    <table>
+        <thead>
+            <tr>
+                <th>matricula</th>
+                <th>color</th>
+                <th>serieId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let ve of vehiculos">
+                <tr *ngIf="seleccion == 800 || seleccion == ve.serieId">
+                    <td>{{ve.matricula}}</td>
+                    <td>{{ve.color}}</td>
+                    <td>{{ve.serieId}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>id</th>
+            <th>marcaId</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let se of series">
+            <tr>
+                <td><a [routerLink]="['/postEnlace/', se.id]">{{se.nomSerie}}</a></td>
+                <td>{{se.id}}</td>
+                <td>{{se.marcaId}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+<!--<td><a [routerLink]="['/unicoProducto/', pr.id]">{{se.nomSerie}}</a></td>-->
+<!--postEnlace/:id-->
