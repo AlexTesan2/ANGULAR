@@ -8,8 +8,9 @@
     <Property Name="nombre" Type="nvarchar" MaxLength="50" />
     <Property Name="apellidos" Type="nvarchar" MaxLength="50" />
     <Property Name="direccion" Type="nvarchar" MaxLength="50" />
-    <Property Name="fnac" Type="nvarchar" MaxLength="10" />
-    <Property Name="sexo" Type="nchar" MaxLength="10" />
+    <Property Name="fnac" Type="nvarchar" MaxLength="50" />
+    <Property Name="sexo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cursoID" Type="int" />
   </EntityType>
   <EntityContainer Name="ColegioModelStoreContainer">
     <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />

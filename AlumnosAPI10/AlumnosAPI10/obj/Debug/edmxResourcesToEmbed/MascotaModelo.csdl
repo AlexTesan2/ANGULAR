@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ColegioModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Mascotas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Animal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdDueño" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ColegioEntities10" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Mascotas" EntityType="Self.Mascotas" />
+  </EntityContainer>
+</Schema>

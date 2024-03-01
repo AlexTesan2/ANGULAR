@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>precio</th>
+            <th>idProveedor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let pr of prod">
+            <tr>
+                <td><a [routerLink]="['/unicoProducto/', pr.id]">{{pr.nomProducto}}</a></td>
+                <td>{{pr.precio}}</td>
+                <td>{{pr.idProveedor}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+<!--<a (click)="pasoProd(pr.id)" [routerLink]="['/unicoProducto/', pr.id]">{{pr.nomProducto}}</a></td>-->

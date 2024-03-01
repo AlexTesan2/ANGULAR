@@ -2,14 +2,15 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ColegioModelStoreContainer" CdmEntityContainer="ColegioEntities">
     <EntitySetMapping Name="Alumnos">
-      <EntityTypeMapping TypeName="ColegioModel.Alumnos">
+      <EntityTypeMapping TypeName="IsTypeOf(ColegioModel.Alumnos)">
         <MappingFragment StoreEntitySet="Alumnos">
+          <ScalarProperty Name="cursoID" ColumnName="cursoID" />
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
-          <ScalarProperty Name="direccion" ColumnName="direccion" />
-          <ScalarProperty Name="fnac" ColumnName="fnac" />
           <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="fnac" ColumnName="fnac" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

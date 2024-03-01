@@ -8,8 +8,9 @@
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fnac" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="sexo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="fnac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sexo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cursoID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityContainer Name="ColegioEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Alumnos" EntityType="Self.Alumnos" />

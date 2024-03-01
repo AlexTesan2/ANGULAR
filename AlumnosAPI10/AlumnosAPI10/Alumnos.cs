@@ -20,5 +20,6 @@ namespace AlumnosAPI10
         public string direccion { get; set; }
         public string fnac { get; set; }
         public string sexo { get; set; }
+        public int cursoID { get; set; }
     }
 }
