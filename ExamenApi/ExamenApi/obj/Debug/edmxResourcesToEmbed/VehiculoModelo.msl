@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBExamenAngularModel1StoreContainer" CdmEntityContainer="DBExamenAngularEntitiesVehiculo">
+    <EntitySetMapping Name="Vehiculos">
+      <EntityTypeMapping TypeName="DBExamenAngularModel1.Vehiculos">
+        <MappingFragment StoreEntitySet="Vehiculos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="serieId" ColumnName="serieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
